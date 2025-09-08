@@ -1,0 +1,211 @@
+/* عام */
+body {
+  background-image: url('/28c00091-8409-4b9e-b78f-463cac92dcb8-Pica.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Tajawal', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* الهيدر */
+header {
+  position: relative;
+}
+
+.top-banner img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* أيقونة الانستغرام */
+.instagram-logo {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 2000;
+}
+
+.instagram-logo img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: white;
+  padding: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+}
+
+.instagram-logo img:hover {
+  transform: scale(1.1);
+}
+
+/* النصوص */
+h1, h3 {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  color: white;
+}
+
+/* حاويات الأقسام */
+#category-container,
+#product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+/* الكروت */
+.card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.3s ease;
+  cursor: pointer;
+  padding: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.card img {
+  width: 100%;
+  height: auto; 
+  object-fit: contain; /* الصورة كاملة */
+  border-radius: 8px;
+}
+
+.card h2, .card h3, .card p {
+  margin: 0.5rem;
+  font-size: 0.95rem;
+  color: #222;
+}
+
+.price {
+  color: #FF0080;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+/* زر الرجوع */
+.back-btn {
+  background: #FF0080;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  margin: 1rem auto;
+  display: block;
+  border-radius: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* النافذة المنبثقة */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.3s ease-in-out;
+  text-align: center;
+}
+
+.modal-content img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: contain; /* الصورة كاملة */
+  border-radius: 12px;
+}
+
+.modal-content h3 {
+  font-size: 1.3rem;
+  color: #ec4899;
+  margin-top: 1rem;
+}
+
+.modal-content p {
+  font-size: 1rem;
+  color: #444;
+  margin-top: 0.75rem;
+}
+
+.close-btn {
+  float: right;
+  font-size: 1.6rem;
+  color: #666;
+  cursor: pointer;
+}
+
+/* أنيميشن */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* للموبايل */
+@media (max-width: 768px) {
+  #category-container,
+  #product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  .card img {
+    height: auto;
+    object-fit: contain;
+  }
+
+  .card h3 {
+    font-size: 0.85rem;
+  }
+
+  .modal-content {
+    padding: 1rem;
+  }
+
+  .modal-content img {
+    max-height: 200px;
+    object-fit: contain;
+  }
+
+  .back-btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .instagram-logo {
+    top: 10px;
+    left: 10px;
+  }
+
+  .instagram-logo img {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+#products-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
