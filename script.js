@@ -108,7 +108,7 @@ const categories = [
   {
     "id": "soda_ice_tea",
     "name": "Soda & Ice Tea",
-    "image": "soda.jpg",
+    "image": "soda/ice tea.jpg",
     "products": [
       { "id": 64, "name": "Ice Tea", "image": "soda/ice tea.jpg", "description": "( Peach)", "price": "65.000" },
       { "id": 65, "name": "Ice Tea", "image": "logo.png", "description": "(Apple, lemon Mix, Berry, Strawberry, Passion, )", "price": "70.000" },
